@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './app';
+import '@fortawesome/fontawesome-free/js/all.js';
+import bg from './img/bg_sky.mp4';
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <video className='videoTag' autoPlay loop muted>
+        <source src={bg} type='video/mp4' />
+    </video>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
